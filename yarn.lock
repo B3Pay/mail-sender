@@ -441,10 +441,10 @@ htmlparser2@^8.0.1:
     domutils "^3.0.1"
     entities "^4.3.0"
 
-ic-vetkd-utils@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/ic-vetkd-utils/-/ic-vetkd-utils-0.1.2.tgz#c38ee01405be53e44d2ad99230a93c109ebec60e"
-  integrity sha512-4M3yHVAiWgdXGCLeIh5m9Ea06W9Q9ME+gL3JgNfp6NWN5EJQ+MRbsDO2EEoc5VKffXIzyOEjg7uNTBwJW4fOkw==
+ic-vetkd-utils@^0.2:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/ic-vetkd-utils/-/ic-vetkd-utils-0.2.0.tgz#4a32e4a461c146aec6b8a9d03294f3be26caa243"
+  integrity sha512-QTt4Qkz99trscBXZDAqmC0bMI6/E62TLIHybYnfsmu07BFYQzm3yCuvKdg01/IjYe0Ta4E5kp9HyMTwa9gZumA==
 
 ignore@^5.2.4:
   version "5.2.4"
