@@ -9,10 +9,8 @@ const CopyPlugin = require("copy-webpack-plugin")
 /** @type {import('next').NextConfig} */
 module.exports = {
   webpack: (config) => {
-    config.experiments = {
-      layers: true,
-      asyncWebAssembly: true,
-    }
+    config.experiments.asyncWebAssembly = true
+
     config.plugins = [
       ...config.plugins,
       new CopyPlugin({

@@ -1,10 +1,9 @@
-import { NextRequest, NextResponse } from "next/server"
+import { NextResponse } from "next/server"
 
-import * as vetkd from "ic-vetkd-utils"
 import { resend } from "../../../lib/resend"
 import SecretShare from "../../../transactional/emails/secret-share"
 
-export async function POST(req: NextRequest) {
+export async function POST(req) {
   console.log(req)
 
   try {
@@ -12,7 +11,7 @@ export async function POST(req: NextRequest) {
       from: "info@b3pay.net",
       to: "behradmusiclove@yahoo.com",
       subject: "Secret Share",
-      react: SecretShare({ link: "Bu" }) as any,
+      react: SecretShare({ link: "Bu" }),
     })
 
     return NextResponse.json(data)
@@ -21,7 +20,8 @@ export async function POST(req: NextRequest) {
   }
 }
 
-export async function GET(req: NextRequest) {
+export async function GET(req) {
+  const vetkd = await import("ic-vetkd-utils")
   console.log({ vetkd })
 
   return NextResponse.json({ message: "Hello, World!" })
