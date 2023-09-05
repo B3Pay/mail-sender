@@ -16,6 +16,8 @@ interface SecretShareProps {
   link: string
 }
 
+const baseUrl = process.env.BASE_URL || ""
+
 export const SecretShare = ({ link }: SecretShareProps) => (
   <Html>
     <Head />
@@ -23,11 +25,7 @@ export const SecretShare = ({ link }: SecretShareProps) => (
     <Body style={main}>
       <Container style={container}>
         <Section style={logoContainer}>
-          <Img
-            src={`http://localhost:3001/logo.svg`}
-            height="58"
-            alt="B3Note"
-          />
+          <Img src={`${baseUrl}/static/logo.png`} height="58" alt="B3Note" />
         </Section>
         <Heading style={h1}>New Secret Message!</Heading>
         <Text style={heroText}>
