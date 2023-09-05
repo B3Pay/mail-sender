@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server"
 
-import * as vetkd from "vetkd-utils"
+import * as vetkd from "ic-vetkd-utils"
 import { resend } from "../../../lib/resend"
 import SecretShare from "../../../transactional/emails/secret-share"
 

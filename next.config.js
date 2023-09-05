@@ -4,6 +4,8 @@ function throwError(envVar) {
 
 if (!process.env.RESEND_API_KEY) return throwError("RESEND_API_KEY")
 
+const CopyPlugin = require("copy-webpack-plugin")
+
 /** @type {import('next').NextConfig} */
 module.exports = {
   webpack: (config) => {
@@ -11,6 +13,17 @@ module.exports = {
       layers: true,
       asyncWebAssembly: true,
     }
+    config.plugins = [
+      ...config.plugins,
+      new CopyPlugin({
+        patterns: [
+          {
+            from: "node_modules/ic-vetkd-utils/ic_vetkd_utils_bg.wasm",
+            to: "server/static/wasm/ae0025c41591870c.wasm",
+          },
+        ],
+      }),
+    ]
     return config
   },
 }
